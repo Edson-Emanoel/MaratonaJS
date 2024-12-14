@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../Style/main-style.css">
+      <title>Eventos | Parte 02</title>
+</head>
+<body>
+      <div>
+            <a esperar="5" href="https://term.ooo/" onclick="navegarComEspera(event)">Termo</a>
+      </div>
+
+      <div>
+            <a esperar="2" href="https://monkepo.online/" onclick="navegarComEspera(event)">Monképo</a>
+      </div>
+
+      <script>
+            // function navegar(evento){
+            //       evento.preventDefault()
+            //       console.log("Navegando...")
+            // }
+            function navegarComEspera(evento){
+                  evento.preventDefault();
+
+                  const link = evento.target;
+                  const segundos = +link.getAttribute('esperar');
+
+                  setTimeout(() => {
+                        window.location.href = link.href
+                  }, segundos * 1000)
+            }
+            
+            const linksPraEsperar = document.querySelectorAll('a[esperar]')
+            linksPraEsperar.forEach(link => link.onclick = navegarComEspera)
+      </script>
+</body>
+</html>

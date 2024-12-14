@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../Style/main-style.css">
+      <title>Eventos | Parte 03</title>
+</head>
+<body>
+
+      <div>Elemento</div>
+
+      <script>
+            const div = document.querySelector('div')
+            div.style.position = "absolute"
+
+            div.onmousemove = function (){
+                  console.log("onMouseMove....");
+            }
+      </script>
+</body>
+</html>

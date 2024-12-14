@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../Style/main-style.css">
+      <title>Eventos | Parte 01</title>
+</head>
+<body>
+      
+      <main style="gap: 3px; display: flex; flex-direction: column;">
+            <div id="resultado" onclick="limpar()" style="cursor: pointer;">-</div>
+            <button onclick="sim()">Sim</button>
+            <button onmouseenter="nao()">Não</button>
+      </main>
+
+      <script>
+            const div = document.querySelector("#resultado")
+
+            function limpar(){
+                  div.innerHTML = "-"
+            }
+
+            function sim(){
+                  div.innerHTML = "Sim"
+            }
+
+            function nao(){
+                  div.innerHTML = "Não"
+            }
+      </script>
+</body>
+</html>
